@@ -3,7 +3,8 @@ function getMovieList() {
     .then(function (response) {
       var MovieData =  response.data.message.rows;
       MovieData.forEach(function (movie) {
-        document.querySelector('#movie_cat').innerHTML += `<div id="box"><h1> NAME:  ${movie.movie_title}</h1> <h2> YEAR :${movie.movie_year_released} </h2> <h3>GENRE: ${movie.movie_genre}</h3> <h4>ID: ${movie.movie_id}</h4>  <img id="movid" src=${movie.movie_picture} </div>`
+        console.log('movie', movie);
+        document.querySelector('#movie_cat').innerHTML += `<div id="box"><h1> NAME:  ${movie.movie_title}</h1> <h2> YEAR :${movie.movie_year_released} </h2> <h3>GENRE: ${movie.movie_genre}</h3> <h4>ID: ${movie.movie_id}</h4>  <img id="movid" src=${movie.movie_picture} >`
         console.log(`${movie.movie_picture}`); //img src dont load? add new data w/ img pics
       }); 
     })

@@ -5,11 +5,7 @@ let movie_genre_input = document.querySelector('#movieGenre')
 let movie_picture_input = document.querySelector('#moviePicture')
 
 postBtn.addEventListener('click', (event) => {
-  console.log('movie_title_input.value', movie_title_input.value);
-  console.log('movie_title_input.value', movie_year_released_input.value);
-  console.log('movie_title_input.value', movie_genre_input.value);
-  console.log('movie_title_input.value', movie_picture_input.value);
-  console.log('event', event);
+    console.log('HELLO');
     event.preventDefault();
     axios.post('https://bewc7jy4y8.execute-api.us-west-2.amazonaws.com/dev/JarJerLar2', {
       movie_title: movie_title_input.value,
@@ -19,7 +15,6 @@ postBtn.addEventListener('click', (event) => {
     })
     .then(function (response) {
       console.log(response);
-      getList()
     })
     .catch(function (error) {
       console.log(error);
