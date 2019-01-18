@@ -19,5 +19,7 @@ postBtn.addEventListener('click', (event) => {
     .catch(function (error) {
       console.log(error);
     });
-    window.location.replace("../index.html");
+    setTimeout(function() {
+      window.location.replace('../index.html');
+    },3000);
   })
