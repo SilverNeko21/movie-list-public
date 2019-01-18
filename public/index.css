@@ -1,3 +1,7 @@
+body {
+	background-color:  rgb(250,250,250);
+}
+
 .myButton {
 	background-color:#44c767;
 	-moz-border-radius:28px;
@@ -31,16 +35,24 @@
 #movid {
     width: 300px;
 	height: 300px;
-	border-radius: 5%;
 }
 
 #box {
-	border-radius:5%;
+	position: relative;
+	border-radius:1rem;
 	width:300px;
 	height:auto;
-    border: 5px solid black;
 	margin:20px;
-	padding: 5px;
+	overflow: hidden;
+	background: rgb(248,248,248);
+	box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+	transition: all .2s linear;
+	text-align: center;
+}
+
+#box:hover {
+	transform: translate3D(0, -4px, 0);
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, .3);
 }
 
 #title {
@@ -56,3 +68,65 @@
 	flex-direction: row;
 }
 
+/* Dr.Keliis styles */
+#box > h1 {
+	position: absolute;
+	top: 0%;
+	margin: 0;
+	padding: 0.5rem;
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+	color: white;
+	background: linear-gradient(45deg, rgba(255,0,151,1) 0%, rgba(66,218,152,1) 93%);
+}
+
+#forms {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+input {
+	width: 25%;
+	height: 2rem;
+	border: 3px solid black;
+	border-radius: 3rem;
+	margin: 0 auto;
+	padding: 0.5rem;
+	font-size: 1.5rem;
+}
+
+button {
+	width: 20%;
+	height: 3rem;
+	border: 2.5px solid black;
+	padding: 0.2rem;
+	transition: all .2s linear;
+	background: transparent;
+	margin: 0 auto;
+	font-size: 2rem;
+	border-radius: 1.5rem;
+}
+
+button:hover {
+	background: black;
+	color: white;
+	cursor:pointer;
+}
+
+#redirects {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.myButton {
+	margin: 1rem;
+}
+
+#editTitle {
+	text-align: center;
+}
