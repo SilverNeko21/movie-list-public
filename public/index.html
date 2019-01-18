@@ -8,24 +8,21 @@
     <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
-    <a href="./delete/delete.html" class="myButton">Delete</a>
-    <a href="./post/post.html" class="myButton">Post</a>
+    <div id="redirects">
+        <a href="./delete/delete.html" class="myButton">Delete</a>
+        <a href="./post/post.html" class="myButton">Post</a>
+    </div>
 
     <div id="movie_cat"></div>
 
-    <form id="id" action="">
-        <h2>Edit Movies</h2>
-        Movie ID <br>
+    <form id="forms" action="">
+        <h2 id = "editTitle">Edit Movies</h2>
         <input id = "id_choice" type="text" name="chooseid" placeholder="movie id"> <br>
-        Movie Title <br>
         <input id = "movieTitle_id" type="text" name="movieTitle" placeholder="Movie title"><br>
-        Released Date<br>
         <input id = "releaseDate_id" type="text" name="releaseDate" placeholder="Release date"><br>
-        Genre<br>
         <input id = "movieGenre_id" type="text" name="movieGenre" placeholder="Genre"><br>
-        Movie Picture<br>
         <input id = "moviePicture_id" type="text" name="moviePicture" placeholder="Image"><br>
-        <input id = "update" type="submit" value="Submit">
+        <button id = "update">Submit</button>
     </form>
 
     <script src="./index.js"></script>
